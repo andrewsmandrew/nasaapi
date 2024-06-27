@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --action-color: #ff6905;
+  --dark-color: #616161;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: var(--dark-color);
+  padding: 10px;
+  color: #FFFFFF;
+  border-bottom: 2px solid var(--action-color);
+}
+
+.header_content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header_content h1 {
+  display: inline;
+}
+
+.button_container {
+  display: inline;
+  float: right;
+}
+
+.button_container button {
+  font-size: 32px;
+  color: #FFFFFF;
+  background-color: var(--dark-color);
+  border: none;
+  border-left: 2px solid var(--dark-color);
+}
+
+.button_container button:hover {
+  color: #dedede;
+  cursor: pointer;
+}
+
+.button_container button:active {
+  color: #FFFFFF;
+}
+
+.body {
+  margin: 1em;
+}
+
+.body_content,
+.about_content {
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 1em;
+}
+
+.body_content {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+@media (min-width: 600px) {
+  .body_content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img weather"
+      "expanded-sol expanded-sol"
+      "more-info more-info";
+  }
+}
+
+@media (max-width: 600px) {
+  .body_content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "weather"
+      "expanded-sol"
+      "more-info";
+  }
+}
+
+.image_container {
+  text-align: center;
+}
+
+.image_container p {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+img {
+  width: 80%;
+  height: width;
+  object-fit: cover;
+  grid-area: img;
+  margin-top: 3em;
+  border-radius: 5px;
+}
+
+.weather {
+  width: 100%;
+  grid-area: weather;
+}
+
+.sol {
+  user-select: none;
+  border: none;
+  background-color: #FFFFFF;
+  border-left: 2px solid black;
+  width: 100%;
+  text-align: left;
+}
+
+.sol:hover {
+  border-left: 2px solid var(--dark-color);
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.sol:active {
+  border-left: 3px solid var(--action-color);
+}
+
+.sol p {
+  margin: 0;
+  padding: 1em;
+}
+
+.expanded_sol {
+  margin-top: 4em;
+  background-color: #e8e8e8;
+  padding: 1em;
+  border-left: 2px solid var(--action-color);
+  grid-area: expanded-sol;
+  border-radius: 5px;
+}
+
+.more_info {
+  margin-bottom: 200px;
+  margin-top: 3em;
+  grid-area: more-info;
+  padding: 1em;
+}
+
+.more_info p {
+  line-height: 2;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Weather</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header_content">
+      <h1>Weather!</h1>
+      <div class="button_container">
+        <a href="index.html"><button type="button">Home</button></a>
+        <a href="about.html"><button type="button">About</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_content">
+      <div class="image_container">
+        <img id="image" alt="Image from curiosity rover">
+        <p class="caption" id="caption">Curiosity Rover Front Hazard Camera DATE</p>
+      </div>
+      <div class="weather">
+        <h2>Recent Weather Reports</h2>
+        <p>Weather conditions from the Curiosity Rover</p>
+        <button class="sol" id="sol1" onclick='select("sol1")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol2" onclick='select("sol2")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol3" onclick='select("sol3")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol4" onclick='select("sol4")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol5" onclick='select("sol5")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol6" onclick='select("sol6")'>
+          <p>Loading...</p>
+        </button>
+        <button class="sol" id="sol7" onclick='select("sol7")'>
+          <p>Loading...</p>
+        </button>
+      </div>
+      <div class="expanded_sol" id="expanded_sol">
+        <h2 id="sol_header">Sol 0001:</h2>
+        <p id="earth_date">Earth Date:</p>
+        <p id="low">Low:</p>
+        <p id="high">High:</p>
+        <p id="sunrise">Sunrise</p>
+        <p id="sunset">Sunset:</p>
+        <p id="ground_temp">Average Ground Temperature:</p>
+        <p id="pressure">Pressure:</p>
+      </div>
+      <div class="more_info">
+        <h2>About Weather Readings:</h2>
+        <p> Days on Mars are longer than days on Earth, it takes 24 hours, 39 minutes, or one <i>sol</i> for Mars
+          to
+          rotate all the way around. The date is represented by <i>sols</i> elapsed since the start of the mission,
+          August 5, 2012 for the Curiosity Rover.</p>
+        <p>Every meteorological reading is taken by the Rover Enviornmental Monitoring
+          Station (REMS). The REMS is just one of the many pieces of science equipment on the Curiosity Rover. These
+          readings are sent back to Earth, the readings don't update continuously, but are instead sent in batches,
+          which is why the latest available weather data might not be extremely current. </p>
+      </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
